@@ -1,6 +1,9 @@
+'use client';
 import Nav from '@/components/layout/nav'
 import './globals.css'
 import { Inter } from 'next/font/google'
+import AppContextProvider from "@/context/app-context"
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,7 +21,10 @@ export default function RootLayout({ children }) {
         <header>
         
         </header>
-        {/* <Nav /> */}
+       
+       <AppContextProvider>
+            {children}
+       </AppContextProvider>
       
       {children}
       </body>

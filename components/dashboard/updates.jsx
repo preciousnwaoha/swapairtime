@@ -5,7 +5,7 @@ const Updates = () => {
   return (
     <div className='mb-8'>
         <PaddedContainer>
-            <div className=" h-36 relative rounded-lg bg-black text-white ">
+            <div className=" h-36 relative rounded-lg bg-black text-white z-[-1]">
 
                 <div className="absolute bottom-0 left-[50%] translate-x-[-55%] flex flex-col items-center p-4">
                     <p className=' text-center underline text-primary-400 text-xs font-semibold mb-2'>LEARN MORE</p>
