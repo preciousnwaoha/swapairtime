@@ -11,10 +11,10 @@ export default function Home() {
 
       <main className="min-h-screen w-full ">
         <PaddedContainer className='flex flex-col text-center items-center'>
-        <h2>Feature is coming soon.</h2>
+        <h2 className="text-xl font-bold mb-8">Feature is coming <span className='text-primary-400'>soon.</span></h2>
 
         <div>
-          <button>Get Notified</button>
+          <button className="btn btn-text">Get Notified</button>
         </div>
       </PaddedContainer>
       </main>

@@ -81,17 +81,17 @@ export function SidebarItem({ icon, text, active, alert, link }) {
       className={`
         relative flex items-center py-2 px-3 my-1
         font-medium rounded-md cursor-pointer
-        transition-colors group
+        transition-colors group  whitespace-nowrap
         ${
           active
-            ? "bg-gradient-to-tr from-indigo-200 to-indigo-100 text-indigo-800"
-            : "hover:bg-indigo-50 text-gray-600"
+            ? "bg-gradient-to-tr from-green-200 to-green-100 text-green-800 "
+            : "hover:bg-green-50 text-gray-700"
         }
     `}
     >
       {icon}
       <span
-        className={`overflow-hidden transition-all  ${
+        className={`overflow-hidden transition-all whitespace-nowrap ${
           expanded  ? "w-52 ml-3" : "w-0"
         }`}
       >
@@ -99,7 +99,7 @@ export function SidebarItem({ icon, text, active, alert, link }) {
       </span>
       {alert && (
         <div
-          className={`absolute right-2 w-2 h-2 rounded bg-indigo-400  ${
+          className={`absolute right-2 w-2 h-2 rounded bg-green-400  ${
             expanded  ? "" : "top-2"
           }`}
         />
@@ -109,10 +109,10 @@ export function SidebarItem({ icon, text, active, alert, link }) {
         <div
           className={`
           absolute left-full rounded-md px-2 py-1 ml-6
-          bg-indigo-100 text-indigo-800 text-sm
+          bg-green-100 text-green-800 text-sm
           invisible opacity-20 -translate-x-3 transition-all
           group-hover:visible group-hover:opacity-100 group-hover:translate-x-0
-          nowrap border border-[green]
+          whitespace-nowrap
 
       `}
         >

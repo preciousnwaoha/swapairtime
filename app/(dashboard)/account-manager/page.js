@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import PaddedContainer from '@/components/layout/padded-container'
-import {PiEyeClosed, PiEye} from "react-icons/pi"
+import {PiEyeClosed, PiEye, PiPhone, PiEnvelope, PiWhatsappLogo} from "react-icons/pi"
 import Options from '@/components/dashboard/options'
 import DashboardHeader from '@/components/dashboard/header'
 import Updates from '@/components/dashboard/updates'
@@ -13,30 +13,49 @@ export default function AccountManager() {
       <DashboardHeader />
       
 
-      <PaddedContainer >
-        <div className='rounded-lg bg-primary-400 p-4 mb-8'>
-              <div className='text-white'>
-                  <p className='text-xs'>Your Balance</p>
-                  <div className='flex items-center'>
-                    <p className="text-2xl font-bold my-4 mr-2">1000.00 </p>
-                    
-                    <>
-                      <PiEye />
-                      <PiEyeClosed />
-                    </>
-                  </div> 
-              </div>
+    <PaddedContainer >
+          <h1 className='mb-4 text-center font-semibold text-xl'>Customer care</h1>
+          <p className='mb-4 text-center text-md'>Were are here to assist <span className="font-semibold text-primary-400">you</span>!</p>
+    </PaddedContainer>
 
-              <div className="flex  text-center">
-                <button className='btn btn-contained bg-white text-black rounded-3xl mr-4'>Swap</button>
-                <button className='btn btn-contained bg-white text-black rounded-3xl'>Fund</button>
-              </div>
-          </div>
-      </PaddedContainer>
+    <div className="flex flex-col">
+              
 
-    <Options />
+           
+    <PaddedContainer className=''>
+         
+         <div className='flex flex-col items-center text-center  py-4'>
+               <PiPhone className='text-primary-400 text-5xl mb-4' />
+                 <p className='text-md'>09025672256</p>
+             </div>
+     </PaddedContainer>
 
-    <Updates />
+     <PaddedContainer className='bg-primary-400'>
+     <div className='flex flex-col items-end self-end  py-4 text-right'>
+      {/* <div className='border'> */}
+      <PiEnvelope className=' text-white text-5xl text-right mb-4 ' />
+      {/* </div> */}
+               
+             <p className='text-md'>contact@swapairtime.com</p>
+             </div>
+     </PaddedContainer>
+
+     <PaddedContainer className='bg-black'>
+       <div className=' text-white flex flex-col  py-4'>
+               <PiWhatsappLogo className='text-primary-400 text-5xl mb-4' />
+             <p className='text-md'>+234679976456</p>
+             </div>
+       </PaddedContainer>
+
+          
+
+      </div>
+
+             
+
+              
+
+     
         
 
      

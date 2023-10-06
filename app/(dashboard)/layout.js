@@ -53,6 +53,7 @@ export default function RootLayout({ children }) {
            </Sidebar>
 
             <div className="min-h-screen w-full ">
+        
               {children}
             </div>  
  
