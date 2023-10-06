@@ -1,14 +1,12 @@
 'use client';
-import { useContext, createContext, useState } from "react"
 import PaddedContainer from '@/components/layout/padded-container'
 import {BsBell, BsHeadset} from "react-icons/bs"
-import {PiEyeClosed, PiEye} from "react-icons/pi"
 import MenuIcon from "@/components/ui/menu-icon"
-import {AppContext} from "@/context/app-context"
+import { useAppContext} from "@/context/app-context"
 
 const DashboardHeader = () => {
 
-  const { sidebarExpanded,  toggleSidebarExpanded } = useContext(AppContext)
+  const { sidebarExpanded,  toggleSidebarExpanded } = useAppContext()
 
   const  handleExpandSidebar = () => {
     toggleSidebarExpanded()

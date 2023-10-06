@@ -3,7 +3,7 @@ import FAQs from '@/components/home/faqs'
 import Hero from '@/components/home/hero'
 import WhyUs from '@/components/home/why-us'
 import BottomCall from '@/components/layout/bottom-call'
-import Link from 'next/link'
+import Image from 'next/image'
 import PaddedContainer from '@/components/layout/padded-container'
 
 export default function Home() {
@@ -21,12 +21,9 @@ export default function Home() {
         <p className='text-sm text-center'>A platform for you, whether you&apos;re a big business or a solo artist</p>
       </div>
 
-      <p className='text-2xl font-light mb-6'>Let&apos;s not waste that airtime, shall we? You don&apos;t have to worry about cash when you have airtime, we&apos; help you <span className='text-primary-400'>convert it </span>to money you can use.</p>
+      <p className='text-2xl font-light mb-6'>Let&apos;s not waste thet airtime, shall we? You focus on bringing your amazing ideas to life and we focus on providing all the conversion tools you need.</p>
 
-      <Link href="/login">
       <button className='btn btn-contained bg-black py-4'>Okay, let&apos;s go</button>
-      </Link>
-      
      </PaddedContainer>
 
      <FAQs />

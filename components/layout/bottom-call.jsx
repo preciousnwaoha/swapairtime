@@ -1,5 +1,6 @@
 import React from 'react'
 import PaddedContainer from './padded-container'
+import Link from "next/link"
 
 const BottomCall = ({text="", heading="Ready to get started?", actionText="Get started", linkText="", link="" }) => {
   return (
@@ -14,7 +15,10 @@ const BottomCall = ({text="", heading="Ready to get started?", actionText="Get s
                 </p>
 
                 <div className='flex items-center'>
-                <button className='btn btn-contained bg-white text-black'>{actionText} </button>
+                    <Link href="/login">
+                    <button className='btn btn-contained bg-white text-black hover:bg-white'>{actionText} </button>
+                    </Link>
+                
                 </div>
                 
             </div>

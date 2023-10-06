@@ -1,5 +1,6 @@
 'use client';
 import React, {useState} from "react";
+import Link from 'next/link'
 import PaddedContainer from "../layout/padded-container";
 import { FAQLIST, OFFERINGS } from "@/config/site";
 import { HiOutlineChevronUp, HiOutlineChevronDown} from 'react-icons/hi'
@@ -13,7 +14,7 @@ const ActionsList = () => {
 
   return (
     <PaddedContainer className="py-4 mb-8">
-      <h2 className='text-2xl font-bold'>Endless Possibilities for every small business</h2>
+      <h2 className='text-2xl font-bold'>Endless Airtime conversions no matter how small.</h2>
       <ul role="list" className="mt-4">
         {FAQLIST.map((faq, index) => {
           return <li key={index} className={`rounded-lg ${(openedFAQ === index) && "border border-primary-400 p-4"} py-4 `} 
@@ -28,8 +29,11 @@ const ActionsList = () => {
             {" "}
             {faq.answer}
           </p>
-
+          
+          <Link href='/login'>
           <button className="btn btn-contained">Get started</button>
+          </Link>
+          
           </>}
 
         </li>

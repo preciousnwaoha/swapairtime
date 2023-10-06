@@ -1,8 +1,15 @@
+'use client';
 import React from 'react'
 import PaddedContainer from '../layout/padded-container'
+import { useRouter } from 'next/navigation'
 
 const Auth = () => {
+  const router = useRouter()
 
+  const handleLogin = () => {
+    console.log("verify")
+    router.push("/dashboard")
+  }
 
   return (
     <div>
@@ -20,11 +27,12 @@ const Auth = () => {
 
                 <p className='text-xs mb-4'>By clicking &apos;Create axxount, I acknowledge that i have read and do hereby accept the terms and conditions of SwapAirtime. </p>
 
-                <button className='btn btn-contained mb-4'>
+
+                <button className='btn btn-contained mb-4' onClick={handleLogin}>
                     Create account
                 </button>
 
-                <p>Already have an account? <span>Log in</span></p>
+                <p>Already have an account? <span className='text-primary-400 cursor-pointer hover:underline'>Log in</span></p>
             </form>
             
         </PaddedContainer>

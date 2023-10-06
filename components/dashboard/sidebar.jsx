@@ -1,15 +1,14 @@
 'use client';
 import { LuMoreVertical, LuChevronLast, LuChevronFirst, } from "react-icons/lu"
 import { MdClose } from "react-icons/md"
-
-import { useContext,  useState } from "react"
+import LogoFull from "@/components/ui/logo-full"
 import Link from "next/link"
 import Image from "next/image";
-import  {AppContext} from "@/context/app-context"
+import  {useAppContext} from "@/context/app-context"
 
 
 export default function Sidebar({ children }) {
-  const { sidebarExpanded: expanded, toggleSidebarExpanded } = useContext(AppContext)
+  const { sidebarExpanded: expanded, toggleSidebarExpanded } = useAppContext()
 
   
   
@@ -18,15 +17,8 @@ export default function Sidebar({ children }) {
   return (
     <aside className={`h-screen ${ expanded  && "absolute top-0 left-0 w-full sm:w-[auto]"}`}>
       <nav className={`h-full flex-col bg-white border-r shadow-sm  ${expanded ? "flex" : "hidden"}  sm:flex`}>
-        <div className="p-4 pb-2 flex justify-between items-center border border-black">
-          <Image
-            src="https://img.logoipsum.com/243.svg"
-            className={`overflow-hidden transition-all border border-red-300 `}
-            width={expanded ? 50 : 0}
-            height={expanded ? 50 : 0}
-            alt="SwapAirtime Logo"
-            priority={true}
-          />
+        <div className="p-4 pb-2 flex justify-between items-center ">
+          <LogoFull />
           <button
             onClick={toggleSidebarExpanded}
             className=" hidden sm:inline-block p-1.5 rounded-lg bg-gray-50 hover:bg-gray-100"
@@ -73,7 +65,7 @@ export default function Sidebar({ children }) {
 }
 
 export function SidebarItem({ icon, text, active, alert, link }) {
-  const { sidebarExpanded: expanded } = useContext(AppContext)
+  const { sidebarExpanded: expanded } = useAppContext()
   
   return (
     <Link href={link || "/"}>
