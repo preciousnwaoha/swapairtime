@@ -13,25 +13,26 @@ export default function AccountManager() {
       <DashboardHeader />
       
 
-    <PaddedContainer >
-      <div className='rounded-lg bg-primary-400 p-4 mb-8'>
-            <div className='text-white'>
-                <p className='text-xs'>Your Balance</p>
-                <div className='flex items-center'>
-                  <p className="text-2xl font-bold my-4 mr-2">1000.00 </p>
-                  <>
-                    <PiEye />
-                    <PiEyeClosed />
-                  </>
-                </div> 
-            </div>
+      <PaddedContainer >
+        <div className='rounded-lg bg-primary-400 p-4 mb-8'>
+              <div className='text-white'>
+                  <p className='text-xs'>Your Balance</p>
+                  <div className='flex items-center'>
+                    <p className="text-2xl font-bold my-4 mr-2">1000.00 </p>
+                    
+                    <>
+                      <PiEye />
+                      <PiEyeClosed />
+                    </>
+                  </div> 
+              </div>
 
-            <div className="flex  text-center">
-              <button className='btn btn-contained bg-white text-black rounded-3xl mr-4'>Swap</button>
-              <button className='btn btn-contained bg-white text-black rounded-3xl'>Fund</button>
-            </div>
-        </div>
-    </PaddedContainer>
+              <div className="flex  text-center">
+                <button className='btn btn-contained bg-white text-black rounded-3xl mr-4'>Swap</button>
+                <button className='btn btn-contained bg-white text-black rounded-3xl'>Fund</button>
+              </div>
+          </div>
+      </PaddedContainer>
 
     <Options />
 
