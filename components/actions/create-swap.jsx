@@ -1,7 +1,10 @@
 import React from 'react'
 import PaddedContainer from '../layout/padded-container'
 
-const CreateSwap = () => {
+const CreateSwap = ({onCreateTicket}) => {
+  const handleCreate = () => {
+    onCreateTicket()
+  }
   return (
     <div>
       <div className='grid grid-cols-4 gap-4 mb-4'>
@@ -51,7 +54,7 @@ const CreateSwap = () => {
           - Wait for balance.
         </div>
 
-        <button className='btn btn-contained'>
+        <button className='btn btn-contained' onClick={handleCreate}>
           Create Ticket
         </button>
     </div>

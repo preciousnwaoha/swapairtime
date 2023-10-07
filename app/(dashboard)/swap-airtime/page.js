@@ -1,4 +1,5 @@
 'use client';
+import React, {useState} from "react"
 import Image from 'next/image'
 import PaddedContainer from '@/components/layout/padded-container'
 import {PiEyeClosed, PiEye} from "react-icons/pi"
@@ -10,6 +11,13 @@ import CreateSwap from "@/components/actions/create-swap"
 import ConfirmTicket from "@/components/actions/confirm-ticket"
 
 export default function Home() {
+  const [createdTicket, setCreatedTicket] = useState(false)
+
+  const handleCreateTicket = () => {
+    console.log("created ticket")
+    setCreatedTicket(prev => !prev)
+  }
+
   return (
     <main className="min-h-screen ">
       
@@ -24,10 +32,14 @@ export default function Home() {
 
         <p className='text-sm mb-8 text-center'>Turn your airtime into cash in minutes, <br/> without stress.</p>
       
+        {
+          createdTicket ?
+          <CreateSwap onCreateTicket={handleCreateTicket} />
+          : <ConfirmTicket />
+        }
+        
 
-        <CreateSwap />
-
-        <ConfirmTicket />
+        
 
 
 
