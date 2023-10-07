@@ -49,7 +49,7 @@ export default function Home() {
         <Updates />
             
     
-        <RecentTransactions />
+        {/* <RecentTransactions /> */}
       </main>
     </>
   )
